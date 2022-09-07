@@ -11,7 +11,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print("hello")
+        let products = Product.getProductList(product: .pizza)
+        print(products)
     }
+
+
 }
 
