@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		434B766528C8F45A00FBAC45 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 434B766428C8F45A00FBAC45 /* .gitignore */; };
 		608BDDDB28C7D2A60026AB4F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BDDDA28C7D2A60026AB4F /* Product.swift */; };
 		60C8C54E28C8BB6400FDA760 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8C54D28C8BB6400FDA760 /* DataManager.swift */; };
 		60D4DE1B28C7929400FADE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4DE1A28C7929400FADE17 /* AppDelegate.swift */; };
@@ -20,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		434B766428C8F45A00FBAC45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = .git/.gitignore; sourceTree = SOURCE_ROOT; };
 		608BDDDA28C7D2A60026AB4F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		60C8C54D28C8BB6400FDA760 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		60D4DE1728C7929400FADE17 /* TeamApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +88,6 @@
 				60D4DE1E28C7929400FADE17 /* ViewController.swift */,
 				60D4DE2328C7929500FADE17 /* Assets.xcassets */,
 				60D4DE2828C7929500FADE17 /* Info.plist */,
-				434B766428C8F45A00FBAC45 /* .gitignore */,
 			);
 			path = TeamApp;
 			sourceTree = "<group>";
@@ -153,7 +150,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				434B766528C8F45A00FBAC45 /* .gitignore in Resources */,
 				60D4DE2728C7929500FADE17 /* LaunchScreen.storyboard in Resources */,
 				60D4DE2428C7929500FADE17 /* Assets.xcassets in Resources */,
 				60DB14CA28C7D7C9004723F7 /* StoryboardAnton.storyboard in Resources */,
