@@ -11,6 +11,8 @@ class DataManager {
     static let shared = DataManager()
     
     class Pizza {
+        static let sharedPizza = Pizza()
+        
         let names = ["Сырная", "Пепперони", "Карбонара", "Домашняя", "Мясная",
                      "Цыпленок барбекю", "Гавайская", "Ветчина и грибы", "Ветчина и сыр", "Мясной микс"]
         
@@ -26,7 +28,9 @@ class DataManager {
                             "Пастрами из индейки, острая чоризо, пикантная пепперони, бекон, моцарелла, томатный соус"]
     }
     
-    class Coffe {
+    class Coffee {
+        static let sharedCoffee = Coffee()
+
         let names = ["Американо", "Капучино", "Латте"]
         
         let descriptions = ["Пара глотков горячего Американо и вы будете готовы покорять этот день",
