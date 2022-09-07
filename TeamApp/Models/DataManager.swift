@@ -8,7 +8,8 @@
 import Foundation
 
 class DataManager {
-    static let shared = DataManager()
+    static let sharedPizza = Pizza()
+    static let sharedCoffe = Coffe()
     
     class Pizza {
         let names = ["Сырная", "Пепперони", "Карбонара", "Домашняя", "Мясная",
