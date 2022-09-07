@@ -13,6 +13,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         print("hello")
+        let products = Product.getProductList(product: .pizza)
+        print(products)
     }
 
 
