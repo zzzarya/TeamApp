@@ -13,7 +13,8 @@ struct Product {
     let description: String
     let image: String
     static var size: Size?
-    static var price: Price?
+    var pizzaPrice: Price.PizzaPrice
+    var coffeePrice: Price.CoffePrice
 }
 
 enum ProductType {
@@ -57,7 +58,9 @@ extension Product {
                     productType: .pizza,
                     name: pizzaNames[iteration],
                     description: pizzaDescriptions[iteration],
-                    image: pizzaNames[iteration])
+                    image: pizzaNames[iteration],
+                    pizzaPrice: .smallPrice,
+                    coffeePrice: .smallPrice)
                 products.append(pizza)
             }
         } else {
@@ -67,12 +70,13 @@ extension Product {
             let numberOfIterations = min(coffeNames.count, coffeDescriptions.count)
             
             for iteration in 0..<numberOfIterations {
-                
                 let coffee = Product(
                     productType: .pizza,
                     name: coffeNames[iteration],
                     description: coffeDescriptions[iteration],
-                    image: coffeNames[iteration])
+                    image: coffeNames[iteration],
+                    pizzaPrice: .smallPrice,
+                    coffeePrice: .smallPrice)
                 products.append(coffee)
             }
         }

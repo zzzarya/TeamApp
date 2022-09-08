@@ -21,12 +21,11 @@ class ProductListViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return pizza.count
+        pizza.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 1
+        1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -35,8 +34,23 @@ class ProductListViewController: UITableViewController {
         
         var content = cell.defaultContentConfiguration()
         content.text = product.description
+        content.image = UIImage(named: product.name)
+        content.secondaryText = "От \(product.pizzaPrice.rawValue)"
         
         cell.contentConfiguration = content
+        
+        //        if indexPath.row == 0 {
+        //            var content = cell.defaultContentConfiguration()
+        //            content.text = product.description
+        //            content.image = UIImage(named: product.name)
+        //
+        //            cell.contentConfiguration = content
+        //        } else {
+        //            var content = cell.defaultContentConfiguration()
+        //            content.text = "От \(product.pizzaPrice.rawValue)"
+        //
+        //            cell.contentConfiguration = content
+        //        }
         
         return cell
     }
@@ -47,6 +61,15 @@ class ProductListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.row == 0 {
+            return 150
+        } else {
+            return 50
+        }
     }
     
     /*

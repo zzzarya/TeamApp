@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Пиццы-->
         <scene sceneID="1hf-LF-JFv">
             <objects>
                 <tableViewController id="noK-oY-Ovr" customClass="ProductListViewController" customModule="TeamApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="noK-oY-Ovr" id="wW5-7l-bAB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ky2-RW-Hmr"/>
+                    <navigationItem key="navigationItem" title="Пиццы" id="ky2-RW-Hmr"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buQ-Ym-Zsm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,8 +40,8 @@
         <scene sceneID="rMC-o9-8y3">
             <objects>
                 <navigationController id="ebf-a7-wyK" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DxG-2N-Lta">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="DxG-2N-Lta">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
