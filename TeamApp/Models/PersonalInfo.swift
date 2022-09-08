@@ -8,15 +8,17 @@
 struct Person {
     let name: String
     let password: String
-    let numberPhone: Int
+    let numberPhone: String
     let email: String
     let avatar: String
-    
-    func getPerson() -> Person {
+    }
+
+extension Person {
+    static func getPerson() -> Person {
         Person(name: "Robert",
-               password: "1",
-               numberPhone: 79120227130,
+               password: "1234",
+               numberPhone: "+79120227130",
                email: "qwe@gmail.com",
                avatar: "avatar")
-    }
+}
 }

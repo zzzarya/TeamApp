@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  PasswordViewController.swift
 //  TeamApp
 //
 //  Created by Илья on 08.09.2022.
@@ -7,17 +7,23 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class PasswordViewController: UIViewController {
 
-    @IBOutlet var loginButton: UIButton!
+    @IBOutlet var nextButton: UIButton!
+    
+    @IBOutlet var passwordTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        settingBottom(for: loginButton)
+        settingBottom(for: nextButton)
     }
     
 
+    @IBAction func checkButton() {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -27,10 +33,10 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    private func settingBottom(for item: UIButton) {
-        item.layer.cornerRadius = 10
-        item.backgroundColor = .systemBlue
-    }
 
+    private func settingBottom(for item: UIButton) {
+           item.layer.cornerRadius = 10
+           item.backgroundColor = .systemBlue
+    }
+    
 }
