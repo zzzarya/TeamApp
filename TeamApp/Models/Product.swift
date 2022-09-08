@@ -10,9 +10,11 @@ import Foundation
 struct Product {
     let productType: ProductType
     let name: String
-    let size: Size
     let description: String
     let image: String
+    static var size: Size?
+    var pizzaPrice: Price.PizzaPrice
+    var coffeePrice: Price.CoffePrice
 }
 
 enum ProductType {
@@ -26,6 +28,21 @@ enum Size {
     case large
 }
 
+enum Price {
+    enum PizzaPrice: String {
+        case smallPrice = "299 рублей"
+        case middlePrice = "399 рублей"
+        case largePrice = "499 рублей"
+    }
+    enum CoffePrice: String {
+        case smallPrice = "99 рублей"
+        case middlePrice = "129 рублей"
+        case largePrice = "159 рублей"
+    }
+}
+
+
+
 extension Product {
     static func getProductList(product: ProductType) -> [Product] {
         var products: [Product] = []
@@ -37,36 +54,14 @@ extension Product {
             let numberOfIterations = min(pizzaNames.count, pizzaDescriptions.count)
             
             for iteration in 0..<numberOfIterations {
-                
-                for size in 0...2 {
-                    
-                    switch size {
-                    case 1:
-                        let pizza = Product(
-                            productType: .pizza,
-                            name: pizzaNames[iteration],
-                            size: Size.small,
-                            description: pizzaDescriptions[iteration],
-                            image: pizzaNames[iteration])
-                        products.append(pizza)
-                    case 2:
-                        let pizza = Product(
-                            productType: .pizza,
-                            name: pizzaNames[iteration],
-                            size: Size.medium,
-                            description: pizzaDescriptions[iteration],
-                            image: pizzaNames[iteration])
-                        products.append(pizza)
-                    default:
-                        let pizza = Product(
-                            productType: .pizza,
-                            name: pizzaNames[iteration],
-                            size: Size.large,
-                            description: pizzaDescriptions[iteration],
-                            image: pizzaNames[iteration])
-                        products.append(pizza)
-                    }
-                }
+                let pizza = Product(
+                    productType: .pizza,
+                    name: pizzaNames[iteration],
+                    description: pizzaDescriptions[iteration],
+                    image: pizzaNames[iteration],
+                    pizzaPrice: .smallPrice,
+                    coffeePrice: .smallPrice)
+                products.append(pizza)
             }
         } else {
             let coffeNames = DataManager.Coffee.sharedCoffee.names
@@ -74,40 +69,19 @@ extension Product {
             
             let numberOfIterations = min(coffeNames.count, coffeDescriptions.count)
             
-            for iteration in 1...numberOfIterations {
-                
-                for size in 1...3 {
-                    
-                    switch size {
-                    case 1:
-                        let coffee = Product(
-                            productType: .pizza,
-                            name: coffeNames[iteration],
-                            size: Size.small,
-                            description: coffeDescriptions[iteration],
-                            image: coffeNames[iteration])
-                        products.append(coffee)
-                    case 2:
-                        let coffee = Product(
-                            productType: .pizza,
-                            name: coffeNames[iteration],
-                            size: Size.medium,
-                            description: coffeDescriptions[iteration],
-                            image: coffeNames[iteration])
-                        products.append(coffee)
-                    default:
-                        let coffee = Product(
-                            productType: .pizza,
-                            name: coffeNames[iteration],
-                            size: Size.large,
-                            description: coffeDescriptions[iteration],
-                            image: coffeNames[iteration])
-                        products.append(coffee)
-                    }
-                }
+            for iteration in 0..<numberOfIterations {
+                let coffee = Product(
+                    productType: .pizza,
+                    name: coffeNames[iteration],
+                    description: coffeDescriptions[iteration],
+                    image: coffeNames[iteration],
+                    pizzaPrice: .smallPrice,
+                    coffeePrice: .smallPrice)
+                products.append(coffee)
             }
         }
         
         return products
     }
 }
+
