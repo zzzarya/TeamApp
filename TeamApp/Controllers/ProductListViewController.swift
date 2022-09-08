@@ -12,12 +12,6 @@ class ProductListViewController: UITableViewController {
     let pizza = Product.getProductList(product: .pizza)
     let coffee = Product.getProductList(product: .coffe)
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
-    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,19 +33,6 @@ class ProductListViewController: UITableViewController {
         
         cell.contentConfiguration = content
         
-        //        if indexPath.row == 0 {
-        //            var content = cell.defaultContentConfiguration()
-        //            content.text = product.description
-        //            content.image = UIImage(named: product.name)
-        //
-        //            cell.contentConfiguration = content
-        //        } else {
-        //            var content = cell.defaultContentConfiguration()
-        //            content.text = "От \(product.pizzaPrice.rawValue)"
-        //
-        //            cell.contentConfiguration = content
-        //        }
-        
         return cell
     }
     
@@ -64,12 +45,7 @@ class ProductListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if indexPath.row == 0 {
-            return 150
-        } else {
-            return 50
-        }
+        150
     }
     
     /*
