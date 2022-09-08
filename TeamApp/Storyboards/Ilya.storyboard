@@ -53,7 +53,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Указать телефон"/>
                                 <connections>
-                                    <segue destination="SdY-Vt-lUQ" kind="presentation" id="Shk-VS-rxc"/>
+                                    <segue destination="SdY-Vt-lUQ" kind="presentation" identifier="showLogin" id="Shk-VS-rxc"/>
                                 </connections>
                             </button>
                         </subviews>
