@@ -2,3 +2,5 @@
 .DS_Store
 TeamApp.xcodeproj/xcuserdata/bogdan.xcuserdatad/xcschemes/xcschememanagement.plist
 TeamApp.xcodeproj/project.xcworkspace/xcuserdata/bogdan.xcuserdatad/UserInterfaceState.xcuserstate
+.DS_Store
+*.xcuserstate
