@@ -10,9 +10,10 @@ import Foundation
 struct Product {
     let productType: ProductType
     let name: String
-    let size: Size
     let description: String
     let image: String
+    static var size: Size?
+    static var price: Price?
 }
 
 enum ProductType {
@@ -25,6 +26,21 @@ enum Size {
     case medium
     case large
 }
+
+enum Price {
+    enum PizzaPrice: String {
+        case smallPrice = "299 рублей"
+        case middlePrice = "399 рублей"
+        case largePrice = "499 рублей"
+    }
+    enum CoffePrice: String {
+        case smallPrice = "99 рублей"
+        case middlePrice = "129 рублей"
+        case largePrice = "159 рублей"
+    }
+}
+
+
 
 extension Product {
     static func getProductList(product: ProductType) -> [Product] {
