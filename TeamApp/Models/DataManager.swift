@@ -9,7 +9,7 @@ import Foundation
 
 class DataManager {
     static let sharedPizza = Pizza()
-    static let sharedCoffe = Coffe()
+    static let sharedCoffe = Coffee()
     
     class Pizza {
         static let sharedPizza = Pizza()
