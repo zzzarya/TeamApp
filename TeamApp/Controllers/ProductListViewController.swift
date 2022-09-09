@@ -15,29 +15,49 @@ class ProductListViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        pizza.count
+        2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        if section == 0 {
+            return pizza.count
+        } else {
+            return coffee.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "product", for: indexPath)
-        let product = pizza[indexPath.section]
         
-        var content = cell.defaultContentConfiguration()
-        content.text = product.description
-        content.image = UIImage(named: product.name)
-        content.secondaryText = "От \(product.pizzaPrice.rawValue)"
-        
-        cell.contentConfiguration = content
+        if indexPath.section == 0 {
+            let product = pizza[indexPath.row]
+            
+            var content = cell.defaultContentConfiguration()
+            content.text = product.name
+            content.image = UIImage(named: product.name)
+            content.secondaryText = product.description
+            
+            cell.contentConfiguration = content
+        } else {
+            let product = coffee[indexPath.row]
+            
+            var content = cell.defaultContentConfiguration()
+            content.text = product.name
+            content.image = UIImage(named: product.name)
+            content.secondaryText = product.description
+            
+            cell.contentConfiguration = content
+        }
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        pizza[section].name
+        if section == 0 {
+            return "Пицца"
+        } else {
+            return "Кофе"
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -45,7 +65,19 @@ class ProductListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        150
+        100
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.textColor = UIColor.black
+        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 30)
+        header.textLabel?.frame = header.bounds
+        header.textLabel?.textAlignment = .left
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        60
     }
     
     /*

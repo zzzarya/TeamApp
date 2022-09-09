@@ -7,17 +7,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Пиццы-->
+        <!--Ассортимент-->
         <scene sceneID="1hf-LF-JFv">
             <objects>
                 <tableViewController id="noK-oY-Ovr" customClass="ProductListViewController" customModule="TeamApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="JLi-Lf-Ls9">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="JLi-Lf-Ls9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="product" id="K1m-hT-Xgs">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="32" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K1m-hT-Xgs" id="rmm-8P-cX6">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="noK-oY-Ovr" id="wW5-7l-bAB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Пиццы" id="ky2-RW-Hmr"/>
+                    <navigationItem key="navigationItem" title="Ассортимент" id="ky2-RW-Hmr"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buQ-Ym-Zsm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
