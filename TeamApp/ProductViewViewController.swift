@@ -29,6 +29,7 @@ class ProductViewViewController: UIViewController {
 
         setupButton()
         setupCharacteristicsProductLabel()
+        setupSizeProductSegment()
     }
     
     @IBAction func sizeProductSegmentPressed() {
@@ -101,6 +102,21 @@ extension ProductViewViewController {
             characteristicsProductLabel.text = "Маленькая 25 см, традиционное тесто, 330 г"
         default:
             characteristicsProductLabel.text = "0,3 л"
+        }
+    }
+}
+
+extension ProductViewViewController {
+    func setupSizeProductSegment() {
+        switch product.productType {
+        case .pizza:
+            sizeProductSegment.setTitle("Маленькая", forSegmentAt: 0)
+            sizeProductSegment.setTitle("Средняя", forSegmentAt: 1)
+            sizeProductSegment.setTitle("Большая", forSegmentAt: 2)
+        default:
+            sizeProductSegment.setTitle("Маленький", forSegmentAt: 0)
+            sizeProductSegment.setTitle("Средний", forSegmentAt: 1)
+            sizeProductSegment.setTitle("Большой", forSegmentAt: 2)
         }
     }
 }
