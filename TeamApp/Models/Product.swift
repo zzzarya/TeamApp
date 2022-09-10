@@ -12,9 +12,9 @@ struct Product {
     let name: String
     let description: String
     let image: String
-    static var size: Size?
-    var pizzaPrice: Price.PizzaPrice
-    var coffeePrice: Price.CoffePrice
+    var size: [Size]
+    var pizzaPrice: [Price.PizzaPrice]
+    var coffeePrice: [Price.CoffePrice]
 }
 
 enum ProductType {
@@ -27,6 +27,7 @@ enum Size {
     case medium
     case large
 }
+
 
 enum Price {
     enum PizzaPrice: String {
@@ -59,8 +60,9 @@ extension Product {
                     name: pizzaNames[iteration],
                     description: pizzaDescriptions[iteration],
                     image: pizzaNames[iteration],
-                    pizzaPrice: .smallPrice,
-                    coffeePrice: .smallPrice)
+                    size: [.small, .medium, .large],
+                    pizzaPrice: [.smallPrice, .middlePrice, .largePrice],
+                    coffeePrice: [.smallPrice, .middlePrice, .largePrice])
                 products.append(pizza)
             }
         } else {
@@ -75,8 +77,9 @@ extension Product {
                     name: coffeNames[iteration],
                     description: coffeDescriptions[iteration],
                     image: coffeNames[iteration],
-                    pizzaPrice: .smallPrice,
-                    coffeePrice: .smallPrice)
+                    size: [.small, .medium, .large],
+                    pizzaPrice: [.smallPrice, .middlePrice, .largePrice],
+                    coffeePrice: [.smallPrice, .middlePrice, .largePrice])
                 products.append(coffee)
             }
         }
