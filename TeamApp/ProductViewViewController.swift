@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProudctViewViewController: UIViewController {
+class ProductViewViewController: UIViewController {
     @IBOutlet var productImageView: UIImageView!
     @IBOutlet var productNameLabel: UILabel!
     @IBOutlet var characteristicsProductLabel: UILabel!
@@ -15,13 +15,16 @@ class ProudctViewViewController: UIViewController {
     @IBOutlet var sizeProductSegment: UISegmentedControl!
     @IBOutlet var buttonToBasketPressed: UIButton!
     
+    var product: Product!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        productNameLabel.text = product.name
+        productImageView.image = UIImage(named: product.image)
+        descriptionProductLabel.text = product.description
 
-        buttonToBasketPressed.backgroundColor = .orange
-        buttonToBasketPressed.layer.cornerRadius = 12
-        buttonToBasketPressed.setTitle("В корзину за 1 р", for: .normal)
-        buttonToBasketPressed.setTitleColor(.white, for: .normal)
+        setupButton()
     }
     
 
@@ -35,4 +38,13 @@ class ProudctViewViewController: UIViewController {
     }
     */
 
+}
+
+extension ProductViewViewController {
+    func setupButton() {
+        buttonToBasketPressed.backgroundColor = .orange
+        buttonToBasketPressed.layer.cornerRadius = 12
+        buttonToBasketPressed.setTitle("В корзину за 1 р", for: .normal)
+        buttonToBasketPressed.setTitleColor(.white, for: .normal)
+    }
 }

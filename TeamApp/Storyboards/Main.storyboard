@@ -40,17 +40,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9Z-Yh-NXc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149" y="461"/>
+            <point key="canvasLocation" x="575" y="702"/>
         </scene>
         <!--ProductList-->
         <scene sceneID="B4M-U2-2UE">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="1" storyboardName="ProductList" id="Sxb-fO-YB7" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ProductList" id="Sxb-fO-YB7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="k7E-XP-Rtu"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ey1-iq-q09" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="-122"/>
+            <point key="canvasLocation" x="166" y="-123"/>
         </scene>
     </scenes>
     <resources>
