@@ -22,10 +22,10 @@ enum ProductType {
     case coffe
 }
 
-enum Size {
-    case small
-    case medium
-    case large
+enum Size: String {
+    case small = "Маленькая"
+    case medium = "Средняя"
+    case large = "Большая"
 }
 
 
