@@ -6,19 +6,21 @@
 //
 
 struct Person {
-    let name: String
-    let password: String
-    let numberPhone: String
-    let email: String
-    let avatar: String
+    var name: String
+    var password: String
+    var numberPhone: String
+    var email: String
+    var avatar: String
+    var address: String
     }
 
 extension Person {
     static func getPerson() -> Person {
         Person(name: "Robert",
                password: "1234",
-               numberPhone: "+79120227130",
+               numberPhone: "12345678911",
                email: "qwe@gmail.com",
-               avatar: "avatar")
+               avatar: "avatarMan",
+               address: "Izhevsk")
 }
 }

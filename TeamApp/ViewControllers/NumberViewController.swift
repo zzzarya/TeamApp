@@ -13,7 +13,7 @@ class NumberViewController: UIViewController {
     
     @IBOutlet var numberTF: UITextField!
     
-    private let person = Person.getPerson()
+    private var person = Person.getPerson()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,23 +22,43 @@ class NumberViewController: UIViewController {
         settingTF(for: numberTF)
     }
     
+    @IBAction func closeButtom(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
     @IBAction func checkButton(_ sender: Any) {
-        if numberTF.text == String(person.numberPhone) {
-            
+        if let text = numberTF.text, !text.isEmpty, text.count == 11 {
+            if numberTF.text == person.numberPhone {
+                performSegue(withIdentifier: "forProfile", sender: nil)
+            } else {
+                person = Person(name: "",
+                                password: "",
+                                numberPhone: numberTF.text ?? "",
+                                email: "",
+                                avatar: "",
+                                address: "")
+//                showAlert(with: "Все бывает в перввый раз", and: "Раньше ты к нам не заходил, заведем новый профиль")
+            }
         } else {
-            showAlert(with: "Зарегистриемся?", and: "Вы входите в первый раз")
+            showAlert(with: "Введите настоящий телефон", and: "Номер указан с ошибкой")
         }
     }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let navigationVC = segue.destination as? UINavigationController else { return }
+        
+        if let passwordVC = navigationVC.topViewController as? PasswordViewController {
+            passwordVC.person = person
+        } else if let profileVC = navigationVC.topViewController as? ProfileViewController {
+            profileVC.person = person
+        }
+//        guard let passwordVC = navigationVC.topViewController as? PasswordViewController else { return }
+//        passwordVC.person = person
+//
+//        guard let profileVC = navigationVC.topViewController as? ProfileViewController else { return }
+//        profileVC.person = person
     }
-    */
     
     private func settingBottom(for item: UIButton) {
            item.layer.cornerRadius = 10
@@ -46,7 +66,7 @@ class NumberViewController: UIViewController {
     }
     
     private func settingTF(for item: UITextField) {
-        item.text = "+7"
+        item.text = "7"
     }
 
 }
