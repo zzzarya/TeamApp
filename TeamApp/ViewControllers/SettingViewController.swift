@@ -17,16 +17,17 @@ class SettingViewController: UIViewController {
     @IBOutlet var oldPasswordTF: UITextField!
     @IBOutlet var newPasswordTF: UITextField!
     
+    @IBOutlet var changeAvatarView: UIImageView!
+    @IBOutlet var choseAvatarControl: UISegmentedControl!
     var delegat: SaveInfoDelegate!
     var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupNavigationBar()
         setupTF()
         getTFDelegat()
-        
     }
     
     @IBAction func closeButton(_ sender: UIBarButtonItem) {
@@ -44,6 +45,10 @@ class SettingViewController: UIViewController {
         telephoneTF.text = person.numberPhone
         emailTF.text = person.email
         adressTF.text = person.address
+        
+        oldPasswordTF.autocorrectionType = .no
+        oldPasswordTF.isSecureTextEntry = true
+        newPasswordTF.autocorrectionType = .no
     }
     
     private func getTFDelegat() {
@@ -90,6 +95,9 @@ extension SettingViewController: UITextFieldDelegate {
         case newPasswordTF:
             if text.count >= 4, !text.isEmpty {
                 person.password = text
+            } else {
+                showAlert(title: "Пароль не совпадает",
+                          message: "Проверь что ты написал")
             }
         default:
             person.address = text
