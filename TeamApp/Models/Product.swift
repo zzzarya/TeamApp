@@ -71,7 +71,7 @@ extension Product {
             
             for iteration in 0..<numberOfIterations {
                 let coffee = Product(
-                    productType: .pizza,
+                    productType: .coffe,
                     name: coffeNames[iteration],
                     description: coffeDescriptions[iteration],
                     image: coffeNames[iteration],
