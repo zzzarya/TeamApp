@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Proudct View View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ProudctViewViewController" customModule="TeamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Сырная" translatesAutoresizingMaskIntoConstraints="NO" id="Bjo-W2-FTE">
+                                <rect key="frame" x="16" y="54" width="382" height="363"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1X-lc-5ex">
+                                <rect key="frame" x="20" y="778" width="374" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="В корзину за 1 р"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сырная" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvB-XG-vpH">
+                                <rect key="frame" x="16" y="422" width="382" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Моцарелла, сыры чеддер и пармезан, соус альфредо" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXV-73-DRl">
+                                <rect key="frame" x="16" y="486" width="382" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Средняя 30 см, традиционное тесто, 500 г" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSH-tB-3Wx">
+                                <rect key="frame" x="16" y="460" width="382" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="itJ-Ki-oqx">
+                                <rect key="frame" x="16" y="586" width="382" height="32"/>
+                                <segments>
+                                    <segment title="Маленькая"/>
+                                    <segment title="Средняя"/>
+                                    <segment title="Большая"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KvB-XG-vpH" firstAttribute="top" secondItem="Bjo-W2-FTE" secondAttribute="bottom" constant="5" id="2Z0-gY-0tj"/>
+                            <constraint firstItem="KXV-73-DRl" firstAttribute="top" secondItem="mSH-tB-3Wx" secondAttribute="bottom" constant="10" id="87z-IM-xLu"/>
+                            <constraint firstItem="KXV-73-DRl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ABG-6t-9JF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="F1X-lc-5ex" secondAttribute="bottom" constant="54" id="H4u-lG-2e5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KvB-XG-vpH" secondAttribute="trailing" constant="16" id="I94-2V-Zfp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KXV-73-DRl" secondAttribute="trailing" constant="16" id="J13-Pi-S9k"/>
+                            <constraint firstItem="itJ-Ki-oqx" firstAttribute="top" secondItem="KXV-73-DRl" secondAttribute="bottom" constant="59" id="JPn-YT-uGx"/>
+                            <constraint firstItem="KvB-XG-vpH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="LfK-fE-ipi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mSH-tB-3Wx" secondAttribute="trailing" constant="16" id="M2V-fd-zaf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Bjo-W2-FTE" secondAttribute="trailing" constant="16" id="O5s-qa-xQN"/>
+                            <constraint firstItem="itJ-Ki-oqx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="OZl-Nq-ieA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="F1X-lc-5ex" secondAttribute="trailing" constant="20" id="Pws-Fq-JJJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="itJ-Ki-oqx" secondAttribute="trailing" constant="16" id="REt-dQ-1tU"/>
+                            <constraint firstItem="F1X-lc-5ex" firstAttribute="top" secondItem="itJ-Ki-oqx" secondAttribute="bottom" constant="161" id="jmV-rq-IKB"/>
+                            <constraint firstItem="mSH-tB-3Wx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="kk4-0r-PcP"/>
+                            <constraint firstItem="Bjo-W2-FTE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="lf9-25-XGe"/>
+                            <constraint firstItem="mSH-tB-3Wx" firstAttribute="top" secondItem="KvB-XG-vpH" secondAttribute="bottom" constant="8" symbolic="YES" id="pp7-Hd-MAN"/>
+                            <constraint firstItem="F1X-lc-5ex" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="x9c-GU-o2L"/>
+                            <constraint firstItem="Bjo-W2-FTE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="yjo-bS-wao"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonToBasketPressed" destination="F1X-lc-5ex" id="G0Q-Nf-Pg2"/>
+                        <outlet property="characteristicsProductLabel" destination="mSH-tB-3Wx" id="6bj-wx-t0F"/>
+                        <outlet property="descriptionProductLabel" destination="KXV-73-DRl" id="vaC-rC-Am5"/>
+                        <outlet property="productImageView" destination="Bjo-W2-FTE" id="Eb7-jh-BQZ"/>
+                        <outlet property="productNameLabel" destination="KvB-XG-vpH" id="xj9-AI-fcT"/>
+                        <outlet property="sizeProductSegment" destination="itJ-Ki-oqx" id="LjX-VY-PEo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Сырная" width="584" height="584"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
