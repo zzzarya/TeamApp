@@ -28,6 +28,7 @@ class ProductViewViewController: UIViewController {
         
 
         setupButton()
+        setupCharacteristicsProductLabel()
     }
     
     @IBAction func sizeProductSegmentPressed() {
@@ -36,21 +37,27 @@ class ProductViewViewController: UIViewController {
         case .pizza:
             switch sizeProductSegment.selectedSegmentIndex {
             case 0:
-                buttonToBasket.setTitle("В корзину за 299", for: .normal)
+                characteristicsProductLabel.text = "Маленькая 25 см, традиционное тесто, 330 г"
+                buttonToBasket.setTitle("В корзину за 299 р", for: .normal)
             case 1:
-                buttonToBasket.setTitle("В корзину за 399", for: .normal)
+                characteristicsProductLabel.text = "Средняя 30 см, традиционное тесто, 500 г"
+                buttonToBasket.setTitle("В корзину за 399 р", for: .normal)
             default:
-                buttonToBasket.setTitle("В корзину за 499", for: .normal)
+                characteristicsProductLabel.text = "Большая 35 см, традиционное тесто, 670 г"
+                buttonToBasket.setTitle("В корзину за 499 р", for: .normal)
             }
             
         default:
             switch sizeProductSegment.selectedSegmentIndex {
             case 0:
-                buttonToBasket.setTitle("В корзину за 99", for: .normal)
+                characteristicsProductLabel.text = "0,3 л"
+                buttonToBasket.setTitle("В корзину за 99 р", for: .normal)
             case 1:
-                buttonToBasket.setTitle("В корзину за 129", for: .normal)
+                characteristicsProductLabel.text = "0,4 л"
+                buttonToBasket.setTitle("В корзину за 129 р", for: .normal)
             default:
-                buttonToBasket.setTitle("В корзину за 159", for: .normal)
+                characteristicsProductLabel.text = "0,5 л"
+                buttonToBasket.setTitle("В корзину за 159 р", for: .normal)
             }
         }
     }
@@ -76,14 +83,24 @@ extension ProductViewViewController {
     func setupButton() {
         buttonToBasket.backgroundColor = .orange
         buttonToBasket.layer.cornerRadius = 12
-        buttonToBasket.setTitle("В корзину за 1 р", for: .normal)
         buttonToBasket.setTitleColor(.white, for: .normal)
         
         switch product.productType {
         case .pizza:
-            buttonToBasket.setTitle("В корзину за 299", for: .normal)
+            buttonToBasket.setTitle("В корзину за 299 р", for: .normal)
         default:
-            buttonToBasket.setTitle("В корзину за 99", for: .normal)
+            buttonToBasket.setTitle("В корзину за 99 р", for: .normal)
+        }
+    }
+}
+
+extension ProductViewViewController {
+    func setupCharacteristicsProductLabel() {
+        switch product.productType {
+        case .pizza:
+            characteristicsProductLabel.text = "Маленькая 25 см, традиционное тесто, 330 г"
+        default:
+            characteristicsProductLabel.text = "0,3 л"
         }
     }
 }
