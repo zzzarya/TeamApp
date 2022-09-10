@@ -19,7 +19,7 @@ struct Developer {
 
 extension Developer {
     static func getInfo() -> [Developer] {
-        [ Developer(name: "Svyatoslav", surname: "Nesterov", work: "Info"), Developer(name: "Anton", surname: "Zarichniy", work: "StoryBoard")]
+        [  Developer(name: "Anton", surname: "Zarichniy", work: "Team lead"), Developer(name: "Bogdan", surname: "Anishenkov", work: "A"), Developer(name: "Karina", surname: "Krasnogorskaya", work: "C"), Developer(name: "Ilya", surname: "Sobin", work: "B"), Developer(name: "Ruslan", surname: "Belov", work: "D"), Developer(name: "Svyatoslav", surname: "Nesterov", work: "Info"),]
             
         
         
