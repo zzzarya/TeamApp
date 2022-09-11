@@ -101,12 +101,20 @@ class ProductListViewController: UITableViewController {
             product = coffee[index.row]
         }
         productViewVC.product = product
+        
+    }
+    
+    private func passProductsToTabBarVC() {
+        let tabBarVC = self.tabBarController as! TabBarViewController
+        tabBarVC.productsToBasket = productsToBasket
+        tabBarVC.passProducts()
     }
 }
 
 extension ProductListViewController: ProductViewViewControllerDelegate {
     func addProduct(some productToBasket: Product) -> [Product] {
         productsToBasket.append(productToBasket)
+        passProductsToTabBarVC()
         return productsToBasket
     }
     

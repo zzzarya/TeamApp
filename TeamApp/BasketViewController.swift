@@ -15,6 +15,7 @@ class BasketViewController: UIViewController {
     var productsInBasket: [Product]!
 
     override func viewDidLoad() {
+        print(productsInBasket)
         super.viewDidLoad()
         BasketTableView.dataSource = self
         BasketTableView.register(UINib(nibName: "BasketTableViewCell", bundle: nil), forCellReuseIdentifier: "product")
