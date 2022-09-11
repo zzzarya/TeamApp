@@ -104,7 +104,7 @@ class ProductListViewController: UITableViewController {
         
     }
     
-    private func passProductsToTabBarVC() {
+    private func passProductsToBasket() {
         guard let lastNavVC = tabBarController?.viewControllers?.last as? UINavigationController else { return }
         guard let basketVC = lastNavVC.topViewController as? BasketViewController else { return }
         basketVC.productsInBasket = productsToBasket
@@ -114,7 +114,7 @@ class ProductListViewController: UITableViewController {
 extension ProductListViewController: ProductViewViewControllerDelegate {
     func addProduct(some productToBasket: Product) -> [Product] {
         productsToBasket.append(productToBasket)
-        passProductsToTabBarVC()
+        passProductsToBasket()
         return productsToBasket
     }
     
