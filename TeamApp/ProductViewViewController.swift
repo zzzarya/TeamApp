@@ -115,9 +115,9 @@ extension ProductViewViewController {
         
         switch product.productType {
         case .pizza:
-            buttonToBasket.setTitle("В корзину за \(product.characteristics[0].price.rawValue) р", for: .normal)
+            buttonToBasket.setTitle("В корзину за \(product.characteristics[1].price.rawValue) р", for: .normal)
         default:
-            buttonToBasket.setTitle("В корзину за \(product.characteristics[0].price.rawValue) р", for: .normal)
+            buttonToBasket.setTitle("В корзину за \(product.characteristics[1].price.rawValue) р", for: .normal)
         }
     }
 }
@@ -126,9 +126,9 @@ extension ProductViewViewController {
     func setupCharacteristicsProductLabel() {
         switch product.productType {
         case .pizza:
-            characteristicsProductLabel.text = "\(product.characteristics[0].size.rawValue)"
+            characteristicsProductLabel.text = "\(product.characteristics[1].size.rawValue)"
         default:
-            characteristicsProductLabel.text = "\(product.characteristics[0].size.rawValue)"
+            characteristicsProductLabel.text = "\(product.characteristics[1].size.rawValue)"
         }
     }
 }
@@ -145,5 +145,7 @@ extension ProductViewViewController {
             sizeProductSegment.setTitle("Средний", forSegmentAt: 1)
             sizeProductSegment.setTitle("Большой", forSegmentAt: 2)
         }
+        
+        sizeProductSegment.selectedSegmentIndex = 1
     }
 }
