@@ -11,6 +11,7 @@ struct Developer {
     let name: String
     let surname: String
     let work: String
+    let contact: String
     
     var fullName: String {
         "\(name) \(surname)"
@@ -19,7 +20,7 @@ struct Developer {
 
 extension Developer {
     static func getInfo() -> [Developer] {
-        [  Developer(name: "Anton", surname: "Zarichniy", work: "Team lead"), Developer(name: "Bogdan", surname: "Anishenkov", work: "A"), Developer(name: "Karina", surname: "Krasnogorskaya", work: "C"), Developer(name: "Ilya", surname: "Sobin", work: "B"), Developer(name: "Ruslan", surname: "Belov", work: "D"), Developer(name: "Svyatoslav", surname: "Nesterov", work: "Info"),]
+        [  Developer(name: "Anton", surname: "Zarichniy", work: "Product card", contact: "t.me/zarek9"), Developer(name: "Bogdan", surname: "Anishenkov", work: "List of products", contact: "t.me/diodonne"), Developer(name: "Karina", surname: "Krasnogorskaya", work: "Checkout screen", contact: "t.me/krasnogorskaya"), Developer(name: "Ilya", surname: "Sobin", work: "Basket", contact: "t.me/sobin_Ilya"), Developer(name: "Ruslan", surname: "Belov", work: "Profile", contact: "t.me/S_Svantesson"), Developer(name: "Svyatoslav", surname: "Nesterov", work: "Info", contact: "t.me/NeSvyatt")]
             
         
         
