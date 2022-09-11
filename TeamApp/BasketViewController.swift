@@ -20,18 +20,29 @@ class BasketViewController: UIViewController {
         BasketTableView.dataSource = self
         BasketTableView.register(UINib(nibName: "BasketTableViewCell", bundle: nil), forCellReuseIdentifier: "product")
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        self.BasketTableView.reloadData()
+    }
 }
 
 
 extension BasketViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        productsInBasket.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "product", for: indexPath) as! BasketTableViewCell
+        let productInBasket = productsInBasket[indexPath.row]
         
-
+        cell.productImage.image = UIImage(named: productInBasket.image)
+        cell.productCost.text = "\(productInBasket.characteristics[0].price.rawValue) рублей"
+        cell.productTitle.text = productInBasket.name
+        cell.productSubTitle.text = productInBasket.characteristics[0].size.rawValue
+        
         return cell
     }
 
