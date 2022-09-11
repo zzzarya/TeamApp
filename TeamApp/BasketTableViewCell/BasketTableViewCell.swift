@@ -9,6 +9,15 @@ import UIKit
 
 class BasketTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productTitle: UILabel!
+    @IBOutlet weak var productSubTitle: UILabel!
+    @IBOutlet weak var productCost: UILabel!
+    @IBOutlet weak var productTrashBasket: UIButton!
+    @IBOutlet weak var productCount: UITextField!
+    @IBOutlet weak var productPlusAndMinus: UIStepper!
+    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

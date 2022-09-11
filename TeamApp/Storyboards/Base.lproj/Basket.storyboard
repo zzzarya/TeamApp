@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NEW-B3-S61">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,30 +11,27 @@
         <!--Корзина-->
         <scene sceneID="zgK-0z-5qA">
             <objects>
-                <viewController id="IQo-bH-WDA" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Oyy-yS-z7s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="IQo-bH-WDA" customClass="BasketViewController" customModule="TeamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oyy-yS-z7s" customClass="BasketTableView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p15-sg-zHo" customClass="BasketTableView" customModule="TeamApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="73" width="343" height="455"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p15-sg-zHo">
+                                <rect key="frame" x="16" y="119.5" width="382" height="668.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="p15-sg-zHo" secondAttribute="height" multiplier="49:65" id="FNu-bv-GOq"/>
-                                </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MCF-H7-Ulh" customClass="BasketTableViewCell" customModule="TeamApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="343" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="product" id="MCF-H7-Ulh" customClass="BasketTableViewCell" customModule="TeamApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="382" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MCF-H7-Ulh" id="AL0-pb-ch9">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0 товара на сумму 0₽ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK3-S0-F2N">
-                                <rect key="frame" x="16" y="44" width="343" height="21"/>
+                                <rect key="frame" x="16" y="88" width="382" height="23.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pK3-S0-F2N" secondAttribute="height" multiplier="49:3" id="V9Z-Yt-mqu"/>
                                 </constraints>
@@ -43,45 +40,33 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpu-Ey-UDU">
-                                <rect key="frame" x="86" y="595" width="203" height="31"/>
+                                <rect key="frame" x="86" y="816" width="242" height="31"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Gpu-Ey-UDU" secondAttribute="height" multiplier="203:31" id="C99-9C-WRV"/>
-                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Офирмить заказ на 0₽"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w39-be-hM1" userLabel="Добавить к заказу?">
-                                <rect key="frame" x="16" y="536" width="343" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="w39-be-hM1" secondAttribute="height" multiplier="343:31" id="Wec-QN-n82"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Добавить к заказу?"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Fp-pt-Rot"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pK3-S0-F2N" firstAttribute="top" secondItem="3Fp-pt-Rot" secondAttribute="top" id="46P-Ki-Xjz"/>
-                            <constraint firstItem="w39-be-hM1" firstAttribute="top" secondItem="p15-sg-zHo" secondAttribute="bottom" constant="8" symbolic="YES" id="49b-JG-MHm"/>
-                            <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="Gpu-Ey-UDU" secondAttribute="trailing" constant="86" id="4jY-3v-D8Z"/>
-                            <constraint firstItem="Gpu-Ey-UDU" firstAttribute="top" secondItem="w39-be-hM1" secondAttribute="bottom" constant="28" id="Fwn-Xz-5fx"/>
-                            <constraint firstItem="Gpu-Ey-UDU" firstAttribute="top" secondItem="w39-be-hM1" secondAttribute="bottom" constant="28" id="GrB-8T-TrE"/>
-                            <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="p15-sg-zHo" secondAttribute="trailing" constant="16" id="I2l-f8-rgP"/>
                             <constraint firstItem="pK3-S0-F2N" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="16" id="Idp-5J-uzj"/>
-                            <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="w39-be-hM1" secondAttribute="trailing" constant="16" id="Ipl-E8-5Vi"/>
-                            <constraint firstItem="3Fp-pt-Rot" firstAttribute="bottom" secondItem="Gpu-Ey-UDU" secondAttribute="bottom" constant="41" id="O2j-hd-sVh"/>
+                            <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="Gpu-Ey-UDU" secondAttribute="trailing" constant="86" id="QIQ-eU-foA"/>
                             <constraint firstItem="p15-sg-zHo" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="16" id="SVG-pd-KeI"/>
-                            <constraint firstItem="p15-sg-zHo" firstAttribute="top" secondItem="pK3-S0-F2N" secondAttribute="bottom" constant="8" symbolic="YES" id="Vrx-uW-yMH"/>
-                            <constraint firstItem="w39-be-hM1" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="16" id="Y8j-J1-Wsf"/>
-                            <constraint firstItem="w39-be-hM1" firstAttribute="top" secondItem="p15-sg-zHo" secondAttribute="bottom" constant="8" symbolic="YES" id="btw-HR-79c"/>
+                            <constraint firstItem="p15-sg-zHo" firstAttribute="top" secondItem="pK3-S0-F2N" secondAttribute="bottom" constant="8" id="SjF-VX-TuT"/>
+                            <constraint firstItem="Gpu-Ey-UDU" firstAttribute="top" secondItem="p15-sg-zHo" secondAttribute="bottom" constant="28" id="YXC-WC-J7j"/>
+                            <constraint firstItem="Gpu-Ey-UDU" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="86" id="bhh-RS-BUT"/>
                             <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="pK3-S0-F2N" secondAttribute="trailing" constant="16" id="hRJ-pb-zX5"/>
-                            <constraint firstItem="Gpu-Ey-UDU" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="86" id="nUh-UC-eNn"/>
-                            <constraint firstItem="p15-sg-zHo" firstAttribute="top" secondItem="pK3-S0-F2N" secondAttribute="bottom" constant="8" symbolic="YES" id="zZP-lV-xPV"/>
+                            <constraint firstItem="p15-sg-zHo" firstAttribute="trailing" secondItem="pK3-S0-F2N" secondAttribute="trailing" id="rYs-Jg-FUU"/>
+                            <constraint firstItem="3Fp-pt-Rot" firstAttribute="bottom" secondItem="Gpu-Ey-UDU" secondAttribute="bottom" constant="15" id="xeH-HZ-3Tj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Корзина" largeTitleDisplayMode="always" id="fAd-8F-yXF"/>
+                    <connections>
+                        <outlet property="BasketTableView" destination="p15-sg-zHo" id="vMK-3k-SlO"/>
+                        <outlet property="countAndCost" destination="pK3-S0-F2N" id="UqQ-Sv-9T9"/>
+                        <outlet property="makeAnOrder" destination="Gpu-Ey-UDU" id="0wt-yF-NUe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fP-w7-dnd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,7 +78,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NEW-B3-S61" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dgG-yN-1lm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
