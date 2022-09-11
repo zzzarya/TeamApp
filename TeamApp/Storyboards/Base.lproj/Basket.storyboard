@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NEW-B3-S61">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Корзина-->
+        <scene sceneID="zgK-0z-5qA">
+            <objects>
+                <viewController id="IQo-bH-WDA" customClass="BasketViewController" customModule="TeamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oyy-yS-z7s" customClass="BasketTableView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p15-sg-zHo">
+                                <rect key="frame" x="16" y="119.5" width="382" height="668.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="product" id="MCF-H7-Ulh" customClass="BasketTableViewCell" customModule="TeamApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="382" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MCF-H7-Ulh" id="AL0-pb-ch9">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0 товара на сумму 0₽ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK3-S0-F2N">
+                                <rect key="frame" x="16" y="88" width="382" height="23.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pK3-S0-F2N" secondAttribute="height" multiplier="49:3" id="V9Z-Yt-mqu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpu-Ey-UDU">
+                                <rect key="frame" x="86" y="816" width="242" height="31"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Офирмить заказ на 0₽"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3Fp-pt-Rot"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pK3-S0-F2N" firstAttribute="top" secondItem="3Fp-pt-Rot" secondAttribute="top" id="46P-Ki-Xjz"/>
+                            <constraint firstItem="pK3-S0-F2N" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="16" id="Idp-5J-uzj"/>
+                            <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="Gpu-Ey-UDU" secondAttribute="trailing" constant="86" id="QIQ-eU-foA"/>
+                            <constraint firstItem="p15-sg-zHo" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="16" id="SVG-pd-KeI"/>
+                            <constraint firstItem="p15-sg-zHo" firstAttribute="top" secondItem="pK3-S0-F2N" secondAttribute="bottom" constant="8" id="SjF-VX-TuT"/>
+                            <constraint firstItem="Gpu-Ey-UDU" firstAttribute="top" secondItem="p15-sg-zHo" secondAttribute="bottom" constant="28" id="YXC-WC-J7j"/>
+                            <constraint firstItem="Gpu-Ey-UDU" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="86" id="bhh-RS-BUT"/>
+                            <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="pK3-S0-F2N" secondAttribute="trailing" constant="16" id="hRJ-pb-zX5"/>
+                            <constraint firstItem="p15-sg-zHo" firstAttribute="trailing" secondItem="pK3-S0-F2N" secondAttribute="trailing" id="rYs-Jg-FUU"/>
+                            <constraint firstItem="3Fp-pt-Rot" firstAttribute="bottom" secondItem="Gpu-Ey-UDU" secondAttribute="bottom" constant="15" id="xeH-HZ-3Tj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Корзина" largeTitleDisplayMode="always" id="fAd-8F-yXF"/>
+                    <connections>
+                        <outlet property="BasketTableView" destination="p15-sg-zHo" id="vMK-3k-SlO"/>
+                        <outlet property="countAndCost" destination="pK3-S0-F2N" id="UqQ-Sv-9T9"/>
+                        <outlet property="makeAnOrder" destination="Gpu-Ey-UDU" id="0wt-yF-NUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fP-w7-dnd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2456.8000000000002" y="152.47376311844079"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vxr-6L-SWe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NEW-B3-S61" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dgG-yN-1lm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IQo-bH-WDA" kind="relationship" relationship="rootViewController" id="cCe-kY-1bg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTg-Nt-fiX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1547.8260869565217" y="152.67857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
