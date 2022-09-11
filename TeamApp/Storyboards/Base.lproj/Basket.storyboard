@@ -44,6 +44,9 @@
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Оформить заказ на 0 ₽"/>
+                                <connections>
+                                    <segue destination="8h2-CG-5VQ" kind="show" id="tLn-7U-Elk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Fp-pt-Rot"/>
@@ -71,6 +74,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fP-w7-dnd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2456.8000000000002" y="152.47376311844079"/>
+        </scene>
+        <!--Payment-->
+        <scene sceneID="0So-AD-oCu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Payment" id="8h2-CG-5VQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RBo-Om-kqz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YmL-cu-MKu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3393" y="153"/>
         </scene>
         <!--Корзина-->
         <scene sceneID="Vxr-6L-SWe">
