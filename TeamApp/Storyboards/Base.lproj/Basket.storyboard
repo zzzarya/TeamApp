@@ -16,22 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p15-sg-zHo">
-                                <rect key="frame" x="16" y="119.5" width="382" height="619.5"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="p15-sg-zHo">
+                                <rect key="frame" x="0.0" y="120.5" width="414" height="619.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="product" id="MCF-H7-Ulh" customClass="BasketTableViewCell" customModule="TeamApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="382" height="43.5"/>
+                                        <rect key="frame" x="20" y="49.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MCF-H7-Ulh" id="AL0-pb-ch9">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0 товара на сумму 0₽ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK3-S0-F2N">
-                                <rect key="frame" x="16" y="88" width="382" height="23.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0 товара на сумму 0 ₽ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK3-S0-F2N">
+                                <rect key="frame" x="16" y="88" width="398" height="24.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pK3-S0-F2N" secondAttribute="height" multiplier="49:3" id="V9Z-Yt-mqu"/>
                                 </constraints>
@@ -40,10 +40,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpu-Ey-UDU">
-                                <rect key="frame" x="86" y="767" width="242" height="31"/>
+                                <rect key="frame" x="86" y="768" width="242" height="30"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Офирмить заказ на 0₽"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Оформить заказ на 0 ₽"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Fp-pt-Rot"/>
@@ -52,11 +52,11 @@
                             <constraint firstItem="pK3-S0-F2N" firstAttribute="top" secondItem="3Fp-pt-Rot" secondAttribute="top" id="46P-Ki-Xjz"/>
                             <constraint firstItem="pK3-S0-F2N" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="16" id="Idp-5J-uzj"/>
                             <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="Gpu-Ey-UDU" secondAttribute="trailing" constant="86" id="QIQ-eU-foA"/>
-                            <constraint firstItem="p15-sg-zHo" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="16" id="SVG-pd-KeI"/>
+                            <constraint firstItem="p15-sg-zHo" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" id="SVG-pd-KeI"/>
                             <constraint firstItem="p15-sg-zHo" firstAttribute="top" secondItem="pK3-S0-F2N" secondAttribute="bottom" constant="8" id="SjF-VX-TuT"/>
                             <constraint firstItem="Gpu-Ey-UDU" firstAttribute="top" secondItem="p15-sg-zHo" secondAttribute="bottom" constant="28" id="YXC-WC-J7j"/>
                             <constraint firstItem="Gpu-Ey-UDU" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="86" id="bhh-RS-BUT"/>
-                            <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="pK3-S0-F2N" secondAttribute="trailing" constant="16" id="hRJ-pb-zX5"/>
+                            <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="pK3-S0-F2N" secondAttribute="trailing" id="hRJ-pb-zX5"/>
                             <constraint firstItem="p15-sg-zHo" firstAttribute="trailing" secondItem="pK3-S0-F2N" secondAttribute="trailing" id="rYs-Jg-FUU"/>
                             <constraint firstItem="3Fp-pt-Rot" firstAttribute="bottom" secondItem="Gpu-Ey-UDU" secondAttribute="bottom" constant="15" id="xeH-HZ-3Tj"/>
                         </constraints>

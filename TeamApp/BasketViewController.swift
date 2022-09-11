@@ -15,23 +15,34 @@ class BasketViewController: UIViewController {
     var productsInBasket: [Product]!
 
     override func viewDidLoad() {
-        print(productsInBasket)
         super.viewDidLoad()
+        
+
         BasketTableView.dataSource = self
         BasketTableView.register(UINib(nibName: "BasketTableViewCell", bundle: nil), forCellReuseIdentifier: "product")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        
+        setupCountAndCost()
+        setupButton()
+        
         self.BasketTableView.reloadData()
     }
 }
 
 
+
+
 extension BasketViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        productsInBasket.count
+        if productsInBasket == nil {
+            return 0
+        } else {
+            return productsInBasket.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,6 +56,34 @@ extension BasketViewController: UITableViewDataSource {
         
         return cell
     }
+}
 
+extension BasketViewController {
+    func setupButton() {
+        makeAnOrder.setTitle("Оформить заказ на \(returnSum()) ₽", for: .normal)
+        makeAnOrder.backgroundColor = .orange
+        makeAnOrder.layer.cornerRadius = 12
+        makeAnOrder.setTitleColor(.white, for: .normal)
+    }
+}
 
+extension BasketViewController {
+    func setupCountAndCost() {
+        
+        if productsInBasket != nil {
+            countAndCost.text = "\(productsInBasket.count) товаров на сумму \(returnSum()) ₽"
+        }
+    }
+}
+
+extension BasketViewController {
+    func returnSum() -> Int {
+        var sum = 0
+        if productsInBasket != nil {
+            for product in productsInBasket {
+                sum += product.characteristics[0].price.rawValue
+            }
+        }
+        return sum
+    }
 }
