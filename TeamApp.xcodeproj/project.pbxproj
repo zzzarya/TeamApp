@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4441E9D328CC89980005A53D /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4441E9D228CC89980005A53D /* BasketViewController.swift */; };
-		52E6478828CCCA85000B8FC3 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6478728CCCA85000B8FC3 /* InfoTableViewController.swift */; };
-		52E6478C28CCD7E5000B8FC3 /* Developers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6478B28CCD7E5000B8FC3 /* Developers.swift */; };
 		608BDDDB28C7D2A60026AB4F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BDDDA28C7D2A60026AB4F /* Product.swift */; };
 		60C8C54E28C8BB6400FDA760 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8C54D28C8BB6400FDA760 /* DataManager.swift */; };
 		60D4DE1B28C7929400FADE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4DE1A28C7929400FADE17 /* AppDelegate.swift */; };
@@ -24,9 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4441E9D228CC89980005A53D /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
-		52E6478728CCCA85000B8FC3 /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
-		52E6478B28CCD7E5000B8FC3 /* Developers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developers.swift; sourceTree = "<group>"; };
 		608BDDDA28C7D2A60026AB4F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		60C8C54D28C8BB6400FDA760 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		60D4DE1728C7929400FADE17 /* TeamApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				608BDDDA28C7D2A60026AB4F /* Product.swift */,
-				52E6478B28CCD7E5000B8FC3 /* Developers.swift */,
 				60C8C54D28C8BB6400FDA760 /* DataManager.swift */,
 			);
 			path = Models;
@@ -77,8 +70,6 @@
 		60D4DE0E28C7929400FADE17 = {
 			isa = PBXGroup;
 			children = (
-				4441E9D228CC89980005A53D /* BasketViewController.swift */,
-				52E6478728CCCA85000B8FC3 /* InfoTableViewController.swift */,
 				60D4DE1928C7929400FADE17 /* TeamApp */,
 				60D4DE1828C7929400FADE17 /* Products */,
 			);
@@ -180,14 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4441E9D328CC89980005A53D /* BasketViewController.swift in Sources */,
 				60C8C54E28C8BB6400FDA760 /* DataManager.swift in Sources */,
 				608BDDDB28C7D2A60026AB4F /* Product.swift in Sources */,
-				52E6478828CCCA85000B8FC3 /* InfoTableViewController.swift in Sources */,
 				60D4DE1B28C7929400FADE17 /* AppDelegate.swift in Sources */,
 				60D4DE1D28C7929400FADE17 /* SceneDelegate.swift in Sources */,
 				60E18A8328CD00F200131129 /* ProductListViewController.swift in Sources */,
-				52E6478C28CCD7E5000B8FC3 /* Developers.swift in Sources */,
 				60E18A8C28CD083400131129 /* ProductViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
