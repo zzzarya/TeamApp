@@ -13,8 +13,12 @@ struct Product {
     let description: String
     let image: String
     static var size: Size?
-    var pizzaPrice: Price.PizzaPrice
-    var coffeePrice: Price.CoffePrice
+    let characteristics: [Characteristics]
+}
+
+struct Characteristics {
+    let size: Size
+    let price: Price
 }
 
 enum ProductType {
@@ -28,17 +32,14 @@ enum Size {
     case large
 }
 
-enum Price {
-    enum PizzaPrice: String {
-        case smallPrice = "299 рублей"
-        case middlePrice = "399 рублей"
-        case largePrice = "499 рублей"
-    }
-    enum CoffePrice: String {
-        case smallPrice = "99 рублей"
-        case middlePrice = "129 рублей"
-        case largePrice = "159 рублей"
-    }
+enum Price: String {
+        case smallPizzaPrice = "299 рублей"
+        case mediumPizzaPrice = "399 рублей"
+        case largePizzaPrice = "499 рублей"
+
+        case smallCoffePrice = "99 рублей"
+        case mediumCoffePrice = "129 рублей"
+        case largeCoffePrice = "159 рублей"
 }
 
 
@@ -59,8 +60,12 @@ extension Product {
                     name: pizzaNames[iteration],
                     description: pizzaDescriptions[iteration],
                     image: pizzaNames[iteration],
-                    pizzaPrice: .smallPrice,
-                    coffeePrice: .smallPrice)
+                    characteristics: [
+                        Characteristics(size: .small, price: .smallPizzaPrice),
+                        Characteristics(size: .medium, price: .mediumPizzaPrice),
+                        Characteristics(size: .large, price: .largePizzaPrice)
+                    ]
+                )
                 products.append(pizza)
             }
         } else {
@@ -71,12 +76,16 @@ extension Product {
             
             for iteration in 0..<numberOfIterations {
                 let coffee = Product(
-                    productType: .pizza,
+                    productType: .coffe,
                     name: coffeNames[iteration],
                     description: coffeDescriptions[iteration],
                     image: coffeNames[iteration],
-                    pizzaPrice: .smallPrice,
-                    coffeePrice: .smallPrice)
+                    characteristics: [
+                        Characteristics(size: .small, price: .smallCoffePrice),
+                        Characteristics(size: .medium, price: .mediumCoffePrice),
+                        Characteristics(size: .large, price: .largeCoffePrice)
+                    ]
+                )
                 products.append(coffee)
             }
         }
