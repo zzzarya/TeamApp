@@ -12,9 +12,6 @@ class InfoTableViewController: UITableViewController {
     
     private var infoList = Developer.getInfo()
     
-   var developer: Developer!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 80
@@ -38,15 +35,15 @@ class InfoTableViewController: UITableViewController {
         content.imageProperties.cornerRadius = tableView.rowHeight / 2
         
         cell.contentConfiguration = content
-    
+        
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailVc = segue.destination as? DetailsViewController else { return }
+        guard let detailVС = segue.destination as? DetailsViewController else { return }
         guard let index = tableView.indexPathForSelectedRow else { return }
         let info = infoList[index.row]
-        detailVc.info = info
+        detailVС.info = info
     }
 }
 

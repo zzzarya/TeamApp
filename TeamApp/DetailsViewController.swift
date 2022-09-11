@@ -9,13 +9,13 @@ import UIKit
 
 class DetailsViewController: UIViewController {
    
-   
-    var info: Developer!
     @IBOutlet var imageDeveloper: UIImageView!
-    
     @IBOutlet var labelContact: UILabel!
     @IBOutlet var labelName: UILabel!
     @IBOutlet var labelWork: UILabel!
+    
+    var info: Developer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,14 +24,9 @@ class DetailsViewController: UIViewController {
         labelName.text = info.fullName
         labelWork.text = info.work
         
-        
         imageDeveloper.layer.cornerRadius = imageDeveloper.frame.width / 2
         imageDeveloper.clipsToBounds = true
        
     }
-    
-
-   
-   
 }
 
