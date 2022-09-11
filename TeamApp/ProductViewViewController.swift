@@ -17,21 +17,48 @@ class ProductViewViewController: UIViewController {
     
     var product: Product!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(product.characteristics[0].size)
         
         productNameLabel.text = product.name
         productImageView.image = UIImage(named: product.image)
         descriptionProductLabel.text = product.description
         
-
         setupButton()
         setupCharacteristicsProductLabel()
         setupSizeProductSegment()
     }
+    
+    private func chooseProduct() -> Product {
+        var productInBasket: Product
+        
+        switch sizeProductSegment.selectedSegmentIndex {
+        case 0:
+            productInBasket = Product(productType: product.productType,
+                                      name: product.name,
+                                      description: product.description,
+                                      image: product.image,
+                                      characteristics: [product.characteristics[0]])
+            
+        case 1:
+            productInBasket = Product(productType: product.productType,
+                                      name: product.name,
+                                      description: product.description,
+                                      image: product.image,
+                                      characteristics: [product.characteristics[1]])
+            
+        default:
+            productInBasket = Product(productType: product.productType,
+                                      name: product.name,
+                                      description: product.description,
+                                      image: product.image,
+                                      characteristics: [product.characteristics[2]])
+        }
+        
+        print(productInBasket)
+        return productInBasket
+    }
+
     
     @IBAction func sizeProductSegmentPressed() {
         
@@ -64,9 +91,10 @@ class ProductViewViewController: UIViewController {
         }
     }
     
-    @IBAction func buttonToBasketPressed(_ sender: Any) {
-        
+    @IBAction func buttonToBasketPressed() {
+        chooseProduct()
     }
+    
     
     
     /*
