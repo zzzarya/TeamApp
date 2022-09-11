@@ -73,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				4441E9D228CC89980005A53D /* BasketViewController.swift */,
-				52E6478728CCCA85000B8FC3 /* InfoTableViewController.swift */,
 				52E6479128CD05B9000B8FC3 /* DetailsViewController.swift */,
 				60D4DE1928C7929400FADE17 /* TeamApp */,
 				60D4DE1828C7929400FADE17 /* Products */,
@@ -91,6 +90,7 @@
 		60D4DE1928C7929400FADE17 /* TeamApp */ = {
 			isa = PBXGroup;
 			children = (
+				52E6478728CCCA85000B8FC3 /* InfoTableViewController.swift */,
 				60C8C55028C8BB9500FDA760 /* Models */,
 				60C8C54F28C8BB7100FDA760 /* Storyboards */,
 				60D4DE1A28C7929400FADE17 /* AppDelegate.swift */,
