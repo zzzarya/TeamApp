@@ -62,15 +62,6 @@
 			path = BasketTableViewCell;
 			sourceTree = "<group>";
 		};
-		60C8C54F28C8BB7100FDA760 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				60D4DE2028C7929400FADE17 /* Basket.storyboard */,
-				60D4DE2528C7929500FADE17 /* LaunchScreen.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
 		60C8C55028C8BB9500FDA760 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,11 +93,12 @@
 				4441E9E128CE20B40005A53D /* BasketTableViewCell */,
 				4441E9D428CCE9700005A53D /* ViewControllers */,
 				60C8C55028C8BB9500FDA760 /* Models */,
-				60C8C54F28C8BB7100FDA760 /* Storyboards */,
 				60D4DE1A28C7929400FADE17 /* AppDelegate.swift */,
 				60D4DE1C28C7929400FADE17 /* SceneDelegate.swift */,
 				60D4DE2328C7929500FADE17 /* Assets.xcassets */,
 				60D4DE2828C7929500FADE17 /* Info.plist */,
+				60D4DE2528C7929500FADE17 /* LaunchScreen.storyboard */,
+				60D4DE2028C7929400FADE17 /* Basket.storyboard */,
 			);
 			path = TeamApp;
 			sourceTree = "<group>";
