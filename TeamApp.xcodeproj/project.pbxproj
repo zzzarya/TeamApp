@@ -12,6 +12,10 @@
 		60040C5D28CE1C580088FEBE /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60040C5C28CE1C580088FEBE /* InfoTableViewController.swift */; };
 		60040C5F28CE1D5A0088FEBE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60040C5E28CE1D5A0088FEBE /* DetailsViewController.swift */; };
 		60040C6328CE1E4A0088FEBE /* ProductList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60040C6228CE1E4A0088FEBE /* ProductList.storyboard */; };
+		60058B6C28CE43DE008BC3CB /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60058B6B28CE43DE008BC3CB /* BasketTableViewCell.swift */; };
+		60058B7028CE4416008BC3CB /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60058B6F28CE4416008BC3CB /* BasketViewController.swift */; };
+		60058B7228CE4429008BC3CB /* BasketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60058B7128CE4429008BC3CB /* BasketTableViewCell.xib */; };
+		60058B7928CE44DA008BC3CB /* Basket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60058B7728CE44DA008BC3CB /* Basket.storyboard */; };
 		608BDDDB28C7D2A60026AB4F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608BDDDA28C7D2A60026AB4F /* Product.swift */; };
 		60C8C54E28C8BB6400FDA760 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8C54D28C8BB6400FDA760 /* DataManager.swift */; };
 		60D4DE1B28C7929400FADE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4DE1A28C7929400FADE17 /* AppDelegate.swift */; };
@@ -20,7 +24,7 @@
 		60D4DE2728C7929500FADE17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60D4DE2528C7929500FADE17 /* LaunchScreen.storyboard */; };
 		60E18A8328CD00F200131129 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E18A8228CD00F200131129 /* ProductListViewController.swift */; };
 		60E18A8828CD01B000131129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E18A8728CD01B000131129 /* Main.storyboard */; };
-		60E18A8A28CD081400131129 /* ProductViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E18A8928CD081400131129 /* ProductViewStoryboard.storyboard */; };
+		60E18A8A28CD081400131129 /* ProductView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60E18A8928CD081400131129 /* ProductView.storyboard */; };
 		60E18A8C28CD083400131129 /* ProductViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E18A8B28CD083400131129 /* ProductViewViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +34,10 @@
 		60040C5C28CE1C580088FEBE /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		60040C5E28CE1D5A0088FEBE /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		60040C6228CE1E4A0088FEBE /* ProductList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductList.storyboard; sourceTree = "<group>"; };
+		60058B6B28CE43DE008BC3CB /* BasketTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasketTableViewCell.swift; path = TeamApp/BasketTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		60058B6F28CE4416008BC3CB /* BasketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasketViewController.swift; path = TeamApp/BasketViewController.swift; sourceTree = SOURCE_ROOT; };
+		60058B7128CE4429008BC3CB /* BasketTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BasketTableViewCell.xib; path = TeamApp/BasketTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		60058B7828CE44DA008BC3CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Basket.storyboard; sourceTree = "<group>"; };
 		608BDDDA28C7D2A60026AB4F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		60C8C54D28C8BB6400FDA760 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		60D4DE1728C7929400FADE17 /* TeamApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,7 +48,7 @@
 		60D4DE2828C7929500FADE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60E18A8228CD00F200131129 /* ProductListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductListViewController.swift; path = TeamApp/ProductListViewController.swift; sourceTree = SOURCE_ROOT; };
 		60E18A8728CD01B000131129 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		60E18A8928CD081400131129 /* ProductViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductViewStoryboard.storyboard; sourceTree = "<group>"; };
+		60E18A8928CD081400131129 /* ProductView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProductView.storyboard; sourceTree = "<group>"; };
 		60E18A8B28CD083400131129 /* ProductViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +68,8 @@
 			children = (
 				60E18A8728CD01B000131129 /* Main.storyboard */,
 				60040C6228CE1E4A0088FEBE /* ProductList.storyboard */,
-				60E18A8928CD081400131129 /* ProductViewStoryboard.storyboard */,
+				60E18A8928CD081400131129 /* ProductView.storyboard */,
+				60058B7728CE44DA008BC3CB /* Basket.storyboard */,
 				60040C5A28CE1C4A0088FEBE /* InfoStoryBoard.storyboard */,
 				60D4DE2528C7929500FADE17 /* LaunchScreen.storyboard */,
 			);
@@ -100,10 +109,13 @@
 				60E18A8B28CD083400131129 /* ProductViewViewController.swift */,
 				60040C5C28CE1C580088FEBE /* InfoTableViewController.swift */,
 				60040C5E28CE1D5A0088FEBE /* DetailsViewController.swift */,
+				60058B6F28CE4416008BC3CB /* BasketViewController.swift */,
+				60058B6B28CE43DE008BC3CB /* BasketTableViewCell.swift */,
 				60C8C55028C8BB9500FDA760 /* Models */,
 				60C8C54F28C8BB7100FDA760 /* Storyboards */,
-				60D4DE1A28C7929400FADE17 /* AppDelegate.swift */,
+				60058B7128CE4429008BC3CB /* BasketTableViewCell.xib */,
 				60D4DE1C28C7929400FADE17 /* SceneDelegate.swift */,
+				60D4DE1A28C7929400FADE17 /* AppDelegate.swift */,
 				60D4DE2328C7929500FADE17 /* Assets.xcassets */,
 				60D4DE2828C7929500FADE17 /* Info.plist */,
 			);
@@ -170,8 +182,10 @@
 			files = (
 				60040C6328CE1E4A0088FEBE /* ProductList.storyboard in Resources */,
 				60D4DE2728C7929500FADE17 /* LaunchScreen.storyboard in Resources */,
+				60058B7928CE44DA008BC3CB /* Basket.storyboard in Resources */,
 				60D4DE2428C7929500FADE17 /* Assets.xcassets in Resources */,
-				60E18A8A28CD081400131129 /* ProductViewStoryboard.storyboard in Resources */,
+				60E18A8A28CD081400131129 /* ProductView.storyboard in Resources */,
+				60058B7228CE4429008BC3CB /* BasketTableViewCell.xib in Resources */,
 				60040C5B28CE1C4A0088FEBE /* InfoStoryBoard.storyboard in Resources */,
 				60E18A8828CD01B000131129 /* Main.storyboard in Resources */,
 			);
@@ -187,9 +201,11 @@
 				60C8C54E28C8BB6400FDA760 /* DataManager.swift in Sources */,
 				608BDDDB28C7D2A60026AB4F /* Product.swift in Sources */,
 				60040C5F28CE1D5A0088FEBE /* DetailsViewController.swift in Sources */,
+				60058B6C28CE43DE008BC3CB /* BasketTableViewCell.swift in Sources */,
 				60D4DE1B28C7929400FADE17 /* AppDelegate.swift in Sources */,
 				60040C5D28CE1C580088FEBE /* InfoTableViewController.swift in Sources */,
 				60D4DE1D28C7929400FADE17 /* SceneDelegate.swift in Sources */,
+				60058B7028CE4416008BC3CB /* BasketViewController.swift in Sources */,
 				60E18A8328CD00F200131129 /* ProductListViewController.swift in Sources */,
 				60E18A8C28CD083400131129 /* ProductViewViewController.swift in Sources */,
 				60040C5928CE1C410088FEBE /* Developers.swift in Sources */,
@@ -199,6 +215,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		60058B7728CE44DA008BC3CB /* Basket.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60058B7828CE44DA008BC3CB /* Base */,
+			);
+			name = Basket.storyboard;
+			sourceTree = "<group>";
+		};
 		60D4DE2528C7929500FADE17 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

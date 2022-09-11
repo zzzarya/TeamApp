@@ -11,6 +11,8 @@ class BasketViewController: UIViewController {
     @IBOutlet weak var countAndCost: UILabel!
     @IBOutlet weak var makeAnOrder: UIButton!
     @IBOutlet weak var BasketTableView: UITableView!
+    
+    var productsInBasket: [Product]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
