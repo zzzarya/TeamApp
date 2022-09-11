@@ -96,10 +96,10 @@
 		60D4DE1928C7929400FADE17 /* TeamApp */ = {
 			isa = PBXGroup;
 			children = (
-				60040C5E28CE1D5A0088FEBE /* DetailsViewController.swift */,
-				60040C5C28CE1C580088FEBE /* InfoTableViewController.swift */,
 				60E18A8228CD00F200131129 /* ProductListViewController.swift */,
 				60E18A8B28CD083400131129 /* ProductViewViewController.swift */,
+				60040C5C28CE1C580088FEBE /* InfoTableViewController.swift */,
+				60040C5E28CE1D5A0088FEBE /* DetailsViewController.swift */,
 				60C8C55028C8BB9500FDA760 /* Models */,
 				60C8C54F28C8BB7100FDA760 /* Storyboards */,
 				60D4DE1A28C7929400FADE17 /* AppDelegate.swift */,
