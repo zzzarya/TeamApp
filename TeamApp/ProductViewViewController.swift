@@ -17,10 +17,11 @@ class ProductViewViewController: UIViewController {
     
     var product: Product!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(product)
+        print(product.characteristics[0].size)
         
         productNameLabel.text = product.name
         productImageView.image = UIImage(named: product.image)
@@ -38,27 +39,27 @@ class ProductViewViewController: UIViewController {
         case .pizza:
             switch sizeProductSegment.selectedSegmentIndex {
             case 0:
-                characteristicsProductLabel.text = "Маленькая 25 см, традиционное тесто, 330 г"
-                buttonToBasket.setTitle("В корзину за 299 р", for: .normal)
+                characteristicsProductLabel.text = "\(product.characteristics[0].size.rawValue)"
+                buttonToBasket.setTitle("В корзину за \(product.characteristics[0].price.rawValue) р", for: .normal)
             case 1:
-                characteristicsProductLabel.text = "Средняя 30 см, традиционное тесто, 500 г"
-                buttonToBasket.setTitle("В корзину за 399 р", for: .normal)
+                characteristicsProductLabel.text = "\(product.characteristics[1].size.rawValue)"
+                buttonToBasket.setTitle("В корзину за \(product.characteristics[1].price.rawValue) р", for: .normal)
             default:
-                characteristicsProductLabel.text = "Большая 35 см, традиционное тесто, 670 г"
-                buttonToBasket.setTitle("В корзину за 499 р", for: .normal)
+                characteristicsProductLabel.text = "\(product.characteristics[2].size.rawValue)"
+                buttonToBasket.setTitle("В корзину за \(product.characteristics[2].price.rawValue) р", for: .normal)
             }
             
         default:
             switch sizeProductSegment.selectedSegmentIndex {
             case 0:
-                characteristicsProductLabel.text = "0,3 л"
-                buttonToBasket.setTitle("В корзину за 99 р", for: .normal)
+                characteristicsProductLabel.text = "\(product.characteristics[0].size.rawValue)"
+                buttonToBasket.setTitle("В корзину за \(product.characteristics[0].price.rawValue) р", for: .normal)
             case 1:
-                characteristicsProductLabel.text = "0,4 л"
-                buttonToBasket.setTitle("В корзину за 129 р", for: .normal)
+                characteristicsProductLabel.text = "\(product.characteristics[1].size.rawValue)"
+                buttonToBasket.setTitle("В корзину за \(product.characteristics[1].price.rawValue) р", for: .normal)
             default:
-                characteristicsProductLabel.text = "0,5 л"
-                buttonToBasket.setTitle("В корзину за 159 р", for: .normal)
+                characteristicsProductLabel.text = "\(product.characteristics[2].size.rawValue)"
+                buttonToBasket.setTitle("В корзину за \(product.characteristics[2].price.rawValue) р", for: .normal)
             }
         }
     }
@@ -88,9 +89,9 @@ extension ProductViewViewController {
         
         switch product.productType {
         case .pizza:
-            buttonToBasket.setTitle("В корзину за 299 р", for: .normal)
+            buttonToBasket.setTitle("В корзину за \(product.characteristics[0].price.rawValue) р", for: .normal)
         default:
-            buttonToBasket.setTitle("В корзину за 99 р", for: .normal)
+            buttonToBasket.setTitle("В корзину за \(product.characteristics[0].price.rawValue) р", for: .normal)
         }
     }
 }
@@ -99,9 +100,9 @@ extension ProductViewViewController {
     func setupCharacteristicsProductLabel() {
         switch product.productType {
         case .pizza:
-            characteristicsProductLabel.text = "Маленькая 25 см, традиционное тесто, 330 г"
+            characteristicsProductLabel.text = "\(product.characteristics[0].size.rawValue)"
         default:
-            characteristicsProductLabel.text = "0,3 л"
+            characteristicsProductLabel.text = "\(product.characteristics[0].size.rawValue)"
         }
     }
 }

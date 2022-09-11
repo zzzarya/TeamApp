@@ -13,8 +13,12 @@ struct Product {
     let description: String
     let image: String
     static var size: Size?
-    var pizzaPrice: Price.PizzaPrice
-    var coffeePrice: Price.CoffePrice
+    let characteristics: [Characteristics]
+}
+
+struct Characteristics {
+    let size: Size
+    let price: Price
 }
 
 enum ProductType {
@@ -22,23 +26,24 @@ enum ProductType {
     case coffe
 }
 
-enum Size {
-    case small
-    case medium
-    case large
+enum Size: String {
+    case smallPizza = "Маленькая 25 см, традиционное тесто, 330 г"
+    case mediumPizza = "Средняя 30 см, традиционное тесто, 500 г"
+    case largePizza = "Большая 35 см, традиционное тесто, 670 г"
+    
+    case smallCoffe = "0,3 л"
+    case mediumCoffe = "0,4 л"
+    case largeCoffe = "0,5 л"
 }
 
-enum Price {
-    enum PizzaPrice: String {
-        case smallPrice = "299 рублей"
-        case middlePrice = "399 рублей"
-        case largePrice = "499 рублей"
-    }
-    enum CoffePrice: String {
-        case smallPrice = "99 рублей"
-        case middlePrice = "129 рублей"
-        case largePrice = "159 рублей"
-    }
+enum Price: Int {
+        case smallPizzaPrice = 299
+        case mediumPizzaPrice = 399
+        case largePizzaPrice = 499
+
+        case smallCoffePrice = 99
+        case mediumCoffePrice = 129
+        case largeCoffePrice = 159
 }
 
 
@@ -59,8 +64,12 @@ extension Product {
                     name: pizzaNames[iteration],
                     description: pizzaDescriptions[iteration],
                     image: pizzaNames[iteration],
-                    pizzaPrice: .smallPrice,
-                    coffeePrice: .smallPrice)
+                    characteristics: [
+                        Characteristics(size: .smallPizza, price: .smallPizzaPrice),
+                        Characteristics(size: .mediumPizza, price: .mediumPizzaPrice),
+                        Characteristics(size: .largePizza, price: .largePizzaPrice)
+                    ]
+                )
                 products.append(pizza)
             }
         } else {
@@ -75,8 +84,12 @@ extension Product {
                     name: coffeNames[iteration],
                     description: coffeDescriptions[iteration],
                     image: coffeNames[iteration],
-                    pizzaPrice: .smallPrice,
-                    coffeePrice: .smallPrice)
+                    characteristics: [
+                        Characteristics(size: .smallCoffe, price: .smallCoffePrice),
+                        Characteristics(size: .mediumCoffe, price: .mediumCoffePrice),
+                        Characteristics(size: .largeCoffe, price: .largeCoffePrice)
+                    ]
+                )
                 products.append(coffee)
             }
         }
