@@ -55,7 +55,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		519CFC6B28CA36CE00BB4E19 /* ViewControllers */ = {
+		519CFC6B28CA36CE00BB4E19 /* ProfileViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				519CFC6C28CA370100BB4E19 /* LoginViewController.swift */,
@@ -64,7 +64,7 @@
 				519CFC7028CA373300BB4E19 /* ProfileViewController.swift */,
 				51B4BCF428CB4AB600781E72 /* SettingViewController.swift */,
 			);
-			path = ViewControllers;
+			path = ProfileViewControllers;
 			sourceTree = "<group>";
 		};
 		60C8C54F28C8BB7100FDA760 /* Storyboards */ = {
@@ -111,7 +111,7 @@
 				60D4DE1A28C7929400FADE17 /* AppDelegate.swift */,
 				60D4DE1C28C7929400FADE17 /* SceneDelegate.swift */,
 				60D4DE1E28C7929400FADE17 /* ViewController.swift */,
-				519CFC6B28CA36CE00BB4E19 /* ViewControllers */,
+				519CFC6B28CA36CE00BB4E19 /* ProfileViewControllers */,
 				60D4DE2828C7929500FADE17 /* Info.plist */,
 				513FED5628CA535200ED392B /* Assets.xcassets */,
 			);
