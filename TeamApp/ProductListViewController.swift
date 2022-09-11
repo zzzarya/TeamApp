@@ -105,9 +105,9 @@ class ProductListViewController: UITableViewController {
     }
     
     private func passProductsToTabBarVC() {
-        let tabBarVC = self.tabBarController as! TabBarViewController
-        tabBarVC.productsToBasket = productsToBasket
-        tabBarVC.passProducts()
+        guard let lastNavVC = tabBarController?.viewControllers?.last as? UINavigationController else { return }
+        guard let basketVC = lastNavVC.topViewController as? BasketViewController else { return }
+        basketVC.productsInBasket = productsToBasket
     }
 }
 

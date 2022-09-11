@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		434B766A28CE534700FBAC45 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434B766928CE534700FBAC45 /* TabBarViewController.swift */; };
 		60040C5928CE1C410088FEBE /* Developers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60040C5828CE1C410088FEBE /* Developers.swift */; };
 		60040C5B28CE1C4A0088FEBE /* InfoStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60040C5A28CE1C4A0088FEBE /* InfoStoryBoard.storyboard */; };
 		60040C5D28CE1C580088FEBE /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60040C5C28CE1C580088FEBE /* InfoTableViewController.swift */; };
@@ -30,7 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		434B766928CE534700FBAC45 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = Storyboards/TabBarViewController.swift; sourceTree = "<group>"; };
 		60040C5828CE1C410088FEBE /* Developers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Developers.swift; sourceTree = "<group>"; };
 		60040C5A28CE1C4A0088FEBE /* InfoStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoStoryBoard.storyboard; sourceTree = "<group>"; };
 		60040C5C28CE1C580088FEBE /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 		60D4DE1928C7929400FADE17 /* TeamApp */ = {
 			isa = PBXGroup;
 			children = (
-				434B766928CE534700FBAC45 /* TabBarViewController.swift */,
 				60E18A8228CD00F200131129 /* ProductListViewController.swift */,
 				60E18A8B28CD083400131129 /* ProductViewViewController.swift */,
 				60040C5C28CE1C580088FEBE /* InfoTableViewController.swift */,
@@ -205,7 +202,6 @@
 				608BDDDB28C7D2A60026AB4F /* Product.swift in Sources */,
 				60040C5F28CE1D5A0088FEBE /* DetailsViewController.swift in Sources */,
 				60058B6C28CE43DE008BC3CB /* BasketTableViewCell.swift in Sources */,
-				434B766A28CE534700FBAC45 /* TabBarViewController.swift in Sources */,
 				60D4DE1B28C7929400FADE17 /* AppDelegate.swift in Sources */,
 				60040C5D28CE1C580088FEBE /* InfoTableViewController.swift in Sources */,
 				60D4DE1D28C7929400FADE17 /* SceneDelegate.swift in Sources */,
