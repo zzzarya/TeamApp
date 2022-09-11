@@ -433,11 +433,13 @@
             </objects>
             <point key="canvasLocation" x="4436" y="98"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Профиль-->
         <scene sceneID="79I-8a-ZcE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zaL-3f-uGM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person.fill" catalog="system" id="qlu-qg-cyT"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3pq-iJ-uRg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -511,6 +513,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="login" width="6300" height="2965"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="settings" width="16" height="16"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
