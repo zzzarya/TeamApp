@@ -12,7 +12,7 @@ class BasketViewController: UIViewController {
     @IBOutlet weak var makeAnOrder: UIButton!
     @IBOutlet weak var BasketTableView: UITableView!
     
-    var productsInBasket: [Product]!
+    static var productsInBasket: [Product]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +24,16 @@ class BasketViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
+        print("viewDidAppear")
         setupCountAndCost()
         setupButton()
         
         self.BasketTableView.reloadData()
+        print(BasketViewController.productsInBasket)
     }
     
     @IBAction func makeAnOrderButtonPressed() {
-        if productsInBasket == nil {
+        if BasketViewController.productsInBasket == nil {
             showAlert()
         }
     }
@@ -44,16 +46,16 @@ class BasketViewController: UIViewController {
 extension BasketViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if productsInBasket == nil {
+        if BasketViewController.productsInBasket == nil {
             return 0
         } else {
-            return productsInBasket.count
+            return BasketViewController.productsInBasket.count
         }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "product", for: indexPath) as! BasketTableViewCell
-        let productInBasket = productsInBasket[indexPath.row]
+        let productInBasket = BasketViewController.productsInBasket[indexPath.row]
         
         cell.productImage.image = UIImage(named: productInBasket.image)
         cell.productCost.text = "\(productInBasket.characteristics[0].price.rawValue) рублей"
@@ -83,8 +85,8 @@ extension BasketViewController {
 extension BasketViewController {
     func setupCountAndCost() {
         
-        if productsInBasket != nil {
-            countAndCost.text = "\(productsInBasket.count) товаров на сумму \(returnSum()) ₽"
+        if BasketViewController.productsInBasket != nil {
+            countAndCost.text = "\(BasketViewController.productsInBasket.count) товаров на сумму \(returnSum()) ₽"
         }
     }
 }
@@ -92,8 +94,8 @@ extension BasketViewController {
 extension BasketViewController {
     func returnSum() -> Int {
         var sum = 0
-        if productsInBasket != nil {
-            for product in productsInBasket {
+        if BasketViewController.productsInBasket != nil {
+            for product in BasketViewController.productsInBasket {
                 sum += product.characteristics[0].price.rawValue
             }
         }

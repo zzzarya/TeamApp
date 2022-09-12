@@ -8,7 +8,7 @@
 import UIKit
 
 class PaymentViewController: UIViewController {
-
+    
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var payLabel: UIButton!
     
@@ -21,6 +21,7 @@ class PaymentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         payLabel.layer.cornerRadius = 10
     }
     
@@ -29,10 +30,13 @@ class PaymentViewController: UIViewController {
         view.endEditing(true)
     }
     
-        
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true)
+    }
+    
     @IBAction func payButton(_ sender: Any) {
         if frontDoorTF.text == "" || intercomTF.text == "" || flatTF.text == "" ||
-        floorTF.text == "" || commentTF.text == "" || phoneTF.text == "" {
+            floorTF.text == "" || commentTF.text == "" || phoneTF.text == "" {
             showAlert(
                 title: "Вы ввели не все данные",
                 message: "Заполните все поля, чтобы мы приняли заказ"
@@ -50,12 +54,12 @@ class PaymentViewController: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
             DispatchQueue.main.async {
                 if alert.title == "Ваш заказ принят" {
-                self.dismiss(animated: true, completion: nil)
+                    BasketViewController.productsInBasket = []
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
         })
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
 }

@@ -153,7 +153,13 @@
                             <constraint firstItem="dYy-Ah-6jA" firstAttribute="leading" secondItem="cbi-bz-ptI" secondAttribute="leading" constant="16" id="yoe-kX-SEy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Доставка и оплата" id="0sr-1t-Rd4"/>
+                    <navigationItem key="navigationItem" title="Доставка и оплата" id="0sr-1t-Rd4">
+                        <barButtonItem key="leftBarButtonItem" title="Back" image="arrowtriangle.backward" catalog="system" id="Ci7-KL-VOL">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="wEE-Rx-aPd" id="dqC-vj-2Nf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="commentTF" destination="6m8-hS-xUu" id="hOb-GN-VEx"/>
                         <outlet property="flatTF" destination="gFb-6v-dse" id="hk2-F2-kVq"/>
@@ -172,7 +178,8 @@
         <!--Navigation Controller-->
         <scene sceneID="kZc-FF-5MU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Ix-uT-zva" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9W-lm-01A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="9Ix-uT-zva" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="eZ6-G8-Yvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
@@ -183,12 +190,12 @@
                         <segue destination="wEE-Rx-aPd" kind="relationship" relationship="rootViewController" id="qmv-kc-9YR"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j9W-lm-01A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="801.44927536231887" y="54.910714285714285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrowtriangle.backward" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
