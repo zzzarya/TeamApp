@@ -12,15 +12,12 @@ class PaymentViewController: UIViewController {
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var payLabel: UIButton!
     
-
     @IBOutlet var frontDoorTF: UITextField!
     @IBOutlet var intercomTF: UITextField!
     @IBOutlet var flatTF: UITextField!
     @IBOutlet var floorTF: UITextField!
     @IBOutlet var commentTF: UITextField!
     @IBOutlet var phoneTF: UITextField!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +42,18 @@ class PaymentViewController: UIViewController {
                 title: "Ваш заказ принят",
                 message: "Ожидайте курьера"
             )
+            guard let basketVC = tabBarController?.viewControllers?.last as? BasketViewController else { return }
+            basketVC.productsInBasket.removeAll()
         }
     }
     
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+            DispatchQueue.main.async {
+                self.dismiss(animated: true, completion: nil)
+            }
+        })
         alert.addAction(okAction)
         present(alert, animated: true)
     }
