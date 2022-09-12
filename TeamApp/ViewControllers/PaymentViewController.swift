@@ -42,8 +42,6 @@ class PaymentViewController: UIViewController {
                 title: "Ваш заказ принят",
                 message: "Ожидайте курьера"
             )
-            guard let basketVC = tabBarController?.viewControllers?.last as? BasketViewController else { return }
-            basketVC.productsInBasket.removeAll()
         }
     }
     
@@ -51,10 +49,13 @@ class PaymentViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
             DispatchQueue.main.async {
+                if alert.title == "Ваш заказ принят" {
                 self.dismiss(animated: true, completion: nil)
+                }
             }
         })
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
 }
