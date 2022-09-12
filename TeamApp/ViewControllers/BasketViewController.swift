@@ -16,8 +16,7 @@ class BasketViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+    
         BasketTableView.dataSource = self
         BasketTableView.register(UINib(nibName: "BasketTableViewCell", bundle: nil), forCellReuseIdentifier: "product")
     }
@@ -30,6 +29,13 @@ class BasketViewController: UIViewController {
         
         self.BasketTableView.reloadData()
     }
+    
+    @IBAction func makeAnOrderButtonPressed() {
+        if productsInBasket == nil {
+            showAlert()
+        }
+    }
+    
 }
 
 
@@ -59,11 +65,18 @@ extension BasketViewController: UITableViewDataSource {
 }
 
 extension BasketViewController {
-    func setupButton() {
+    private func setupButton() {
         makeAnOrder.setTitle("Оформить заказ на \(returnSum()) ₽", for: .normal)
         makeAnOrder.backgroundColor = .orange
         makeAnOrder.layer.cornerRadius = 12
         makeAnOrder.setTitleColor(.white, for: .normal)
+    }
+    
+    private func showAlert() {
+        let alert = UIAlertController(title: "Упс!", message: "Корзина пуста", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(alertAction)
+        self.present(alert, animated: true)
     }
 }
 

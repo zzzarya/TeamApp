@@ -45,6 +45,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Оформить заказ на 0 ₽"/>
                                 <connections>
+                                    <action selector="makeAnOrderButtonPressed" destination="IQo-bH-WDA" eventType="touchUpInside" id="AQI-E1-t6I"/>
                                     <segue destination="8h2-CG-5VQ" kind="show" id="tLn-7U-Elk"/>
                                 </connections>
                             </button>
