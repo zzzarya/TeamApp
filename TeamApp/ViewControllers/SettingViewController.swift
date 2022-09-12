@@ -107,7 +107,5 @@ extension SettingViewController: UITextFieldDelegate {
             person.password = newPasswordTF.text ?? ""
         }
     
-//        showAlert(title: "Ошибочный формат!",
-//                  message: "Проверь что ты написал")
     }
 }

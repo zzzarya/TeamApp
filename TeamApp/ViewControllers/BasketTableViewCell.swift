@@ -17,18 +17,6 @@ class BasketTableViewCell: UITableViewCell {
     @IBOutlet weak var productCount: UITextField!
     @IBOutlet weak var productPlusAndMinus: UIStepper!
     
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
 }
 
 

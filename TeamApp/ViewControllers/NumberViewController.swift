@@ -53,11 +53,6 @@ class NumberViewController: UIViewController {
         } else if let profileVC = navigationVC.topViewController as? ProfileViewController {
             profileVC.person = person
         }
-//        guard let passwordVC = navigationVC.topViewController as? PasswordViewController else { return }
-//        passwordVC.person = person
-//
-//        guard let profileVC = navigationVC.topViewController as? ProfileViewController else { return }
-//        profileVC.person = person
     }
     
     private func settingBottom(for item: UIButton) {
