@@ -49,18 +49,38 @@
                                     <segue destination="8h2-CG-5VQ" kind="show" id="tLn-7U-Elk"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpE-zc-9GF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Упс...Корзина пуста" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Da8-cz-vmA">
+                                        <rect key="frame" x="128" y="438" width="158.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Da8-cz-vmA" firstAttribute="centerY" secondItem="tpE-zc-9GF" secondAttribute="centerY" id="tIN-Rk-End"/>
+                                    <constraint firstItem="Da8-cz-vmA" firstAttribute="centerX" secondItem="tpE-zc-9GF" secondAttribute="centerX" id="wTK-VF-eVY"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3Fp-pt-Rot"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pK3-S0-F2N" firstAttribute="top" secondItem="3Fp-pt-Rot" secondAttribute="top" id="46P-Ki-Xjz"/>
+                            <constraint firstItem="tpE-zc-9GF" firstAttribute="leading" secondItem="p15-sg-zHo" secondAttribute="leading" id="ERd-jx-tw2"/>
                             <constraint firstItem="pK3-S0-F2N" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="16" id="Idp-5J-uzj"/>
+                            <constraint firstItem="tpE-zc-9GF" firstAttribute="trailing" secondItem="p15-sg-zHo" secondAttribute="trailing" id="Q2a-Gh-kvb"/>
                             <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="Gpu-Ey-UDU" secondAttribute="trailing" constant="86" id="QIQ-eU-foA"/>
                             <constraint firstItem="p15-sg-zHo" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" id="SVG-pd-KeI"/>
                             <constraint firstItem="p15-sg-zHo" firstAttribute="top" secondItem="pK3-S0-F2N" secondAttribute="bottom" constant="8" id="SjF-VX-TuT"/>
+                            <constraint firstItem="tpE-zc-9GF" firstAttribute="top" secondItem="Oyy-yS-z7s" secondAttribute="topMargin" constant="-88" id="W6b-jY-ZRs"/>
                             <constraint firstItem="Gpu-Ey-UDU" firstAttribute="top" secondItem="p15-sg-zHo" secondAttribute="bottom" constant="28" id="YXC-WC-J7j"/>
                             <constraint firstItem="Gpu-Ey-UDU" firstAttribute="leading" secondItem="3Fp-pt-Rot" secondAttribute="leading" constant="86" id="bhh-RS-BUT"/>
                             <constraint firstItem="3Fp-pt-Rot" firstAttribute="trailing" secondItem="pK3-S0-F2N" secondAttribute="trailing" id="hRJ-pb-zX5"/>
+                            <constraint firstItem="tpE-zc-9GF" firstAttribute="centerY" secondItem="Oyy-yS-z7s" secondAttribute="centerY" id="qJh-S6-lTn"/>
                             <constraint firstItem="p15-sg-zHo" firstAttribute="trailing" secondItem="pK3-S0-F2N" secondAttribute="trailing" id="rYs-Jg-FUU"/>
                             <constraint firstItem="3Fp-pt-Rot" firstAttribute="bottom" secondItem="Gpu-Ey-UDU" secondAttribute="bottom" constant="15" id="xeH-HZ-3Tj"/>
                         </constraints>
@@ -68,13 +88,15 @@
                     <navigationItem key="navigationItem" title="Корзина" largeTitleDisplayMode="always" id="fAd-8F-yXF"/>
                     <connections>
                         <outlet property="BasketTableView" destination="p15-sg-zHo" id="vMK-3k-SlO"/>
+                        <outlet property="basketEmptyLabel" destination="Da8-cz-vmA" id="pFr-pz-PhR"/>
                         <outlet property="countAndCost" destination="pK3-S0-F2N" id="UqQ-Sv-9T9"/>
                         <outlet property="makeAnOrder" destination="Gpu-Ey-UDU" id="0wt-yF-NUe"/>
+                        <outlet property="viewEmptyLabel" destination="tpE-zc-9GF" id="TvR-un-xae"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fP-w7-dnd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2456.8000000000002" y="152.47376311844079"/>
+            <point key="canvasLocation" x="2456.521739130435" y="152.00892857142856"/>
         </scene>
         <!--Payment-->
         <scene sceneID="0So-AD-oCu">

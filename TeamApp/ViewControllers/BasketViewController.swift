@@ -11,6 +11,9 @@ class BasketViewController: UIViewController {
     @IBOutlet weak var countAndCost: UILabel!
     @IBOutlet weak var makeAnOrder: UIButton!
     @IBOutlet weak var BasketTableView: UITableView!
+    @IBOutlet var basketEmptyLabel: UILabel!
+    @IBOutlet var viewEmptyLabel: UIView!
+    
     
     static var productsInBasket: [Product]!
 
@@ -29,7 +32,7 @@ class BasketViewController: UIViewController {
         setupButton()
         
         self.BasketTableView.reloadData()
-        print(BasketViewController.productsInBasket)
+        
     }
     
     @IBAction func makeAnOrderButtonPressed() {
@@ -47,8 +50,12 @@ extension BasketViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if BasketViewController.productsInBasket == nil {
+            basketEmptyLabel.isHidden = false
+            viewEmptyLabel.isHidden = false
             return 0
         } else {
+            basketEmptyLabel.isHidden = true
+            viewEmptyLabel.isHidden = true
             return BasketViewController.productsInBasket.count
         }
     }
