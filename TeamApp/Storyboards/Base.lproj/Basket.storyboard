@@ -112,7 +112,7 @@
         <scene sceneID="Vxr-6L-SWe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NEW-B3-S61" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Корзина" image="trash.fill" catalog="system" id="XdY-Ah-Rwn"/>
+                    <tabBarItem key="tabBarItem" title="Корзина" image="cart.fill" catalog="system" id="XdY-Ah-Rwn"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dgG-yN-1lm">
@@ -130,7 +130,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="trash.fill" catalog="system" width="121" height="128"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
